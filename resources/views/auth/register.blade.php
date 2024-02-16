@@ -1,4 +1,9 @@
 <x-guest-layout>
+<div class = "flex flex-row">
+    <div class = "bg-blue-500 rounded w-8">
+        <p>Hi</p>
+    </div>
+</div>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 

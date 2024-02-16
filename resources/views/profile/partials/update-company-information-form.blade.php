@@ -1,11 +1,11 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900">
-            {{ __('Profile Information') }}
+            {{ __('Company Information') }}
         </h2>
 
         <p class="mt-1 text-sm text-gray-600">
-            {{ __("Update your account's profile information and email address.") }}
+            {{ __("Update your account's company information and email address.") }}
         </p>
     </header>
 
@@ -24,9 +24,9 @@
         </div>
 
         <div>
-            <x-input-label for="title" :value="__('Title')" />
-            <x-text-input id="title" name="title" type="text" class="mt-1 block w-full" :value="old('title', $user->title)" required autofocus autocomplete="title" />
-            <x-input-error class="mt-2" :messages="$errors->get('title')" />
+            <x-input-label for="slogan" :value="__('Slogan')" />
+            <x-text-input id="slogan" name="slogan" type="text" class="mt-1 block w-full" :value="old('slogan', $user->slogan)" required autofocus autocomplete="slogan" />
+            <x-input-error class="mt-2" :messages="$errors->get('slogan')" />
         </div>
 
         <div>
@@ -36,32 +36,15 @@
         </div>
 
         <div>
-            <x-input-label for="post" :value="__('Post')" />
-            <x-text-input id="post" name="post" type="text" class="mt-1 block w-full" :value="old('post', $user->post)" required autofocus autocomplete="post" />
-            <x-input-error class="mt-2" :messages="$errors->get('post')" />
+            <x-input-label for="description" :value="__('Description')" />
+            <x-text-input id="description" name="description" type="text" class="mt-1 block w-full" :value="old('description', $user->description)" required autofocus autocomplete="description" />
+            <x-input-error class="mt-2" :messages="$errors->get('description')" />
         </div>
 
-        <div>
-            <x-input-label for="address" :value="__('Address')" />
-            <x-text-input id="address" name="address" type="text" class="mt-1 block w-full" :value="old('address', $user->address)" required autofocus autocomplete="address" />
-            <x-input-error class="mt-2" :messages="$errors->get('address')" />
-        </div>
 
         <div>
-            <x-input-label for="contact" :value="__('Contact')" />
-            <x-text-input id="contact" name="contact" type="text" class="mt-1 block w-full" :value="old('contact', $user->contact)" required autofocus autocomplete="contact" />
-            <x-input-error class="mt-2" :messages="$errors->get('contact')" />
-        </div>
-
-        <div>
-            <x-input-label for="aboutme" :value="__('About Me')" />
-            <x-text-input id="aboutme" name="aboutme" type="text" class="mt-1 block w-full" :value="old('aboutme', $user->aboutme)" required autofocus autocomplete="aboutme" />
-            <x-input-error class="mt-2" :messages="$errors->get('aboutme')" />
-        </div>
-
-        <div>
-            <x-input-label for="pfp" :value="__('Profile Picture')" />
-            <input id="pfp" name="pfp" type="file" class="mt-1 block w-full" accept="image/*" />
+            <x-input-label for="logo" :value="__('Profile Picture')" />
+            <input id="logo" name="logo" type="file" class="mt-1 block w-full" accept="image/*" />
         </div>
 
         <div>

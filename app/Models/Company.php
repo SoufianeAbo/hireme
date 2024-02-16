@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class Company extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -21,14 +21,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'logo',
         'role',
-        'pfp',
-        'title',
-        'post',
+        'slogan',
         'industry',
-        'address',
-        'contact',
-        'aboutme',
+        'description',
     ];
 
     /**
@@ -50,24 +47,4 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-
-    public function experience()
-    {
-        return $this->hasMany(Experience::class);
-    }
-
-    public function education()
-    {
-        return $this->hasMany(Education::class);
-    }
-
-    public function language()
-    {
-        return $this->hasMany(Language::class);
-    }
-
-    public function competence()
-    {
-        return $this->hasMany(Competence::class);
-    }
 }

@@ -69,6 +69,11 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+
+        'companies' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Company::class,
+        ]
     ],
 
     /*
